@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Age calculator app</title>
+  <script type="application/javascript" src="validation.js"></script>
+</head>
+
+<body>
+
+  <main>
+    <form id="dateForm" novalidate>
+      <label id="dayLabel" class="date-label">DAY</label>
+      <input id="day" type="number" placeholder="DD">
+      <span class="errors-invisible" id="errorDay"></span>
+
+      <label id="monthLabel" class="date-label">MONTH</label>
+      <input id="month" type="number" placeholder="MM">
+      <span class="errors-invisible" id="errorMonth"></span>
+
+      <label id="yearLabel" class="date-label">YEAR</label>
+      <input id="year" type="number" placeholder="YYYY">
+      <span class="errors-invisible" id="errorYear"></span>
+    </form>
+
+    <section class="btn-content">
+      <div class="line"></div>
+      <button id="btnCalculate">
+        <img id="btnImage" type="image" src="assets/images/icon-arrow.svg" alt="icon of arrow">
+      </button>
+      <div class="line-2"></div>
+    </section>
+
+    <section class="result">
+      <span class="result-text"><span id="yearResult" class="result-number result-dash-space">--</span> years</span>
+      <span class="result-text"><span id="monthResult" class="result-number result-dash-space">--</span> months</span>
+      <span class="result-text"><span id="dayResult" class="result-number result-dash-space">--</span> days</span>
+    </section>
+  </main>
+</body>
+
+</html>

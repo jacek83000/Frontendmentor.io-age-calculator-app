@@ -1,0 +1,249 @@
+@font-face {
+    font-family: poppinsItalic;
+    src: url(assets/fonts/Poppins-Italic.ttf);
+}
+
+@font-face {
+    font-family: poppinsRegular;
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppinsBold;
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: poppinsExtraBoldItalic;
+    src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: poppinsBold;
+    font-size: 20px;
+    min-height: 100vh;
+    margin: 0;
+    background-color: hsl(0, 0%, 94%);
+}
+
+main {
+    width: 52.8rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    border-bottom-right-radius: 200px;
+    box-sizing: border-box;
+    padding: 1.5rem 3.5rem;
+}
+
+form {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 10rem);
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    max-width: 36rem;
+}
+
+.date-label {
+    align-self: end;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    color: hsl(0, 1%, 44%);
+    margin-bottom: 0px;
+}
+
+input {
+    width: 100%;
+    font-family: poppinsBold;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    border-color: hsl(0, 0%, 86%);
+    border-style: solid;
+    box-sizing: border-box;
+    padding: 10px 22px;
+}
+
+input:focus {
+    outline-color: hsl(259, 100%, 65%);
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: hsl(0, 0%, 54%);
+    /* Firefox */
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: hsl(0, 0%, 54%);
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: hsl(0, 0%, 54%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid hsl(0, 0%, 86%);
+}
+
+.line-2 {
+    display: none;
+}
+
+.btn-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#btnCalculate {
+    flex-shrink: 0;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: none;
+    background-color: hsl(259, 100%, 65%);
+    box-sizing: border-box;
+}
+
+#btnCalculate:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+#btnImage {
+    position: relative;
+    top: 3px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    font-family: poppinsExtraBoldItalic;
+    font-size: 6.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 5px;
+}
+
+.result-text {
+    color: black;
+    margin-bottom: 0rem;
+    letter-spacing: -1px;
+    line-height: 7rem;
+}
+
+.result-number {
+    color: hsl(259, 100%, 65%);
+    letter-spacing: 0;
+}
+
+.result-dash-space {
+    letter-spacing: 1rem;
+}
+
+.errors-invisible {
+    display: none;
+}
+
+.error-form {
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.error-input {
+    border-color: hsl(0, 100%, 67%);
+    background-repeat: no-repeat;
+}
+
+
+.error-text {
+    display: block;
+    font-family: poppinsItalic;
+    font-size: 0.9rem;
+    color: hsl(0, 100%, 67%);
+}
+
+.error-date-label {
+    color: hsl(0, 100%, 67%);
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        width: 21.5rem;
+        border-bottom-right-radius: 100px;
+        padding: 1.5rem;
+    }
+
+    form {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 0.8rem;
+        row-gap: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .date-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.1rem;
+    }
+
+    input {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+
+    .line-2 {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid hsl(0, 0%, 86%);
+    }
+
+    .btn-content {
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    #btnCalculate {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    #btnImage {
+        top: 2px;
+        width: 26px;
+        height: 26px;
+    }
+
+    .result {
+        font-size: 3.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .result-text {
+        line-height: 4rem;
+        letter-spacing: -1px;
+    }
+
+    .result-dash-space {
+        letter-spacing: 0.1rem;
+    }
+
+    .error-text {
+        font-size: 0.7rem;
+    }
+}
