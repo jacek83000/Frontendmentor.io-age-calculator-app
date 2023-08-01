@@ -30,7 +30,7 @@ function numberNotInRange(value, min, max) {
     return ((value < min) || (value > max));
 }
 function yearFromFuture(value) {
-    return value > new Date().getFullYear ? true : false;
+    return value > new Date().getFullYear() ? true : false;
 }
 
 function isLeapYear(year) {
